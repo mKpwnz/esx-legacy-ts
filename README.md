@@ -6,11 +6,7 @@ Create a file "esx.ts" containing:
 
 ```typescript
 import { ESXClient } from '@mkpwnz/esx-ts/client/esx_client'
-
-export let ESX: ESXClient
-emit('esx:getSharedObject', (obj) => {
-    ESX = obj
-})
+export let ESX: ESXClient = exports["es_extended"]:getSharedObject()
 ```
 
 ESX is now available! example on "test.ts":
@@ -26,11 +22,7 @@ Create a file "esx.ts" containing:
 
 ```typescript
 import { ESXServer } from '@mkpwnz/esx-ts/server/esx_server'
-
-export let ESX: ESXServer
-emit('esx:getSharedObject', (obj) => {
-    ESX = obj
-})
+export let ESX: ESXServer = exports["es_extended"]:getSharedObject()
 ```
 
 ESX is now available! example on "test.ts":
