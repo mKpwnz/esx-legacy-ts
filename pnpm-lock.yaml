@@ -1,0 +1,36 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@citizenfx/client':
+    specifier: ^2.0.6947-1
+    version: 2.0.6947-1
+  '@citizenfx/server':
+    specifier: ^2.0.6947-1
+    version: 2.0.6947-1
+  fivem-js:
+    specifier: ^1.5.2
+    version: 1.5.2
+
+packages:
+
+  /@citizenfx/client@1.0.3281-1:
+    resolution: {integrity: sha512-hZ82+Z1CfFFWYqTohDc9K2Cn00NAGQ4Hv34JH9kQpMsA2talHVUXjZOZ78/Dtk0DcGVA2beSYfA8fMm6ZrKmHg==}
+    dev: false
+
+  /@citizenfx/client@2.0.6947-1:
+    resolution: {integrity: sha512-Kxix7H+l15WgLg2vg0N+SNB3i7HEGBNhUsbN7mdRoHA45fhOp5lIOYegTFnFqMQrE1i506OlEH+KAxJcwh/GyQ==}
+    dev: false
+
+  /@citizenfx/server@2.0.6947-1:
+    resolution: {integrity: sha512-s/uweR1YgHtvO2ToUjoBKJqWUD2778LZWVBlUylQvsUuu5HZXrkpa+sWxQ8yvRCWns+oNHWNMZpbVXnChlC/FQ==}
+    dev: false
+
+  /fivem-js@1.5.2:
+    resolution: {integrity: sha512-PONuAo9djL3UnEcVHxxLLHClQnpnLbiJXu2fNNGvi5Li/7IKfwn5PMHERrjr1Sq+oWeoao100LlsnlnA1mGCew==}
+    dependencies:
+      '@citizenfx/client': 1.0.3281-1
+    dev: false

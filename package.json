@@ -1,0 +1,15 @@
+{
+    "name": "@mkpwnz/esx-legacy-ts",
+    "version": "0.2.11",
+    "description": "Typescript wrapper for the FiveM ESX core natives",
+    "license": "ISC",
+    "dependencies": {
+        "@citizenfx/client": "^2.0.6947-1",
+        "@citizenfx/server": "^2.0.6947-1",
+        "fivem-js": "^1.5.2"
+    },
+    "repository": "https://github.com/mkpwnz/esx-legacy-ts.git",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    }
+}
