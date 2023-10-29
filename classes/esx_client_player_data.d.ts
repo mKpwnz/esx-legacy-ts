@@ -1,9 +1,10 @@
 import { Coords } from './coords'
+import { ESXPlayerOSXItem } from './osx_inventory'
 
 export declare interface ESXClientPlayerData {
     identifier: string
     group: string
-    inventory: ESXClientPlayerInventoryItem[] | ESXCLientPlayerOSXItem[]
+    inventory: ESXClientPlayerInventoryItem[] | ESXPlayerOSXItem[]
     maxWeight: number
     firstName: string
     lastName: string
@@ -44,24 +45,6 @@ export declare interface ESXClientPlayerAccount {
     money: number
     name: string
     label: string
-    round: boolean // This is not in the documentation, but it is in the code
-    index: number // This is not in the documentation, but it is in the code
-}
-
-export declare interface ESXCLientPlayerOSXItem {
-    label: string
-    weight: number
-    info: any[]
-    name: string
-    can_remove: boolean
-    x: number
-    y: number
-    description: string
-    amount: number
-    category: string
-    id: string
-    metadata: any[]
-    rare: boolean
 }
 
 export declare interface ESXClientPlayerMetaData {
