@@ -71,6 +71,16 @@ export class ESXPlayer extends ESXServerXPlayer {
     addWeaponComponent(weaponName: string, weaponComponent: string): void
 
     /**
+     * @description
+     * @author mKpwnz
+     * @date 11.11.2023
+     * @param {string} weaponName
+     * @param {number} ammoCount
+     * @memberof ESXPlayer
+     */
+    updateWeaponAmmo(weaponName: string, ammoCount: number): void
+
+    /**
      * @description This function is used to determinate if a player can carry an item, and is the successor to the previous item limit checks
      * @author mKpwnz
      * @date 28.04.2023
