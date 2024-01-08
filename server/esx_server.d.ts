@@ -1,3 +1,5 @@
+import { ESXServerXPlayer } from '../classes'
+import { ESXServerJobGrades, ESXServerJobs } from '../classes/esx_server_jobs'
 import { ESXCommon } from '../common/esx_common'
 import { ESXPlayer } from './esx_xplayer'
 
@@ -163,4 +165,128 @@ export class ESXServer extends ESXCommon {
      * @memberof ESXServer
      */
     DoesJobExist(job: string, grade: number): boolean
+
+    /**
+     * @description
+     * @author sirjxsh
+     * @date 08.01.2024
+     * @param {any} key
+     * @param {any} value
+     * @returns {ESXServerXPlayer[]}  {xPlayer}
+     * @memberof ESXServer
+     */
+    GetExtendedPlayer(key: any, value: any): ESXServerXPlayer[]
+
+    /**
+     * @description
+     * @author sirjxsh
+     * @date 08.01.2024
+     * @param {any} key
+     * @param {any} value
+     * @returns {number}  {count}
+     * @memberof ESXServer
+     */
+    GetNumPlayers(key: any, value: any): number
+
+    /**
+     * @description
+     * @author sirjxsh
+     * @date 08.01.2024
+     * @param {number} playerid
+     * @returns {string}  {identifier}
+     * @memberof ESXServer
+     */
+    GetIdentifier(id: number): string
+
+    /**
+     * @description
+     * @author sirjxsh
+     * @date 08.01.2024
+     * @param {string | number} model
+     * @param {number} player
+     * @param {Function} [callback] Callback function
+     * @returns {string}  {identifier}
+     * @memberof ESXServer
+     */
+    GetVehicleType(model: string | number, player: number, callback?: Function): string
+
+    /**
+     * @description
+     * @author sirjxsh
+     * @date 08.01.2024
+     * @param {string} name
+     * @param {string} title
+     * @param {string} color
+     * @param {string} message
+     * @memberof ESXServer
+     */
+    DiscordLog(name: string, title: string, color: string, message: string): void
+
+    /**
+     * @description
+     * @author sirjxsh
+     * @date 08.01.2024
+     * @param {string} name
+     * @param {string} title
+     * @param {string} color
+     * @param {any} fields
+     * @memberof ESXServer
+     */
+    DiscordLogField(name: string, title: string, color: string, fields: any): void
+
+    /**
+     * @description This function creates a job. It is async, and a function (optional) is invoked once saving is complete.
+     * @param {string} name The name of the job
+     * @param {string} label The label of the job
+     * @param {ESXServerJobGrades[]} grades The grades of the job
+     * @memberof ESXServer
+     */
+    CreateJob(name: string, label: string, grades: ESXServerJobGrades[]): void
+
+    /**
+     * @description This function refreshes the jobs.
+     * @author sirjxsh
+     * @date 08.01.2024
+     * @memberof ESXServer
+     */
+    RefreshJobs(): void
+
+    /**
+     * @description This function overrides the Playerfunction
+     * @author sirjxsh
+     * @date 08.01.2024
+     * @param {string} index
+     * @memberof ESXServer
+     */
+    RegisterPlayerFunctionOverride(index: string): void
+
+    /**
+     * @description This function returns the jobs. It is async, and a function (optional) is invoked once saving is complete.
+     * @author sirjxsh
+     * @date 08.01.2024
+     * @returns {ESXServerJobs[]}  {ESXServerJobs[]}
+     * @memberof ESXServer
+     */
+    GetJobs(): ESXServerJobs[]
+
+    /**
+     * @description This function returns the job.
+     * @author sirjxsh
+     * @date 08.01.2024
+     * @param {string} name The name of the job
+     * @param {number} grade The grade of the job
+     * @returns {boolean}  Exists or not
+     * @memberof ESXServer
+     */
+    DoesJobExist(job: string, grade: number): boolean
+
+    /**
+     * @description Returns if the player is admin or not
+     * @author sirjxsh
+     * @date 08.01.2024
+     * @param {number} playerid
+     * @returns {boolean} {boolean}
+     * @memberof ESXServer
+     */
+    IsPlayerAdmin(playerid: number): boolean
 }
