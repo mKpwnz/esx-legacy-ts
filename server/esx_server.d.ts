@@ -175,7 +175,7 @@ export class ESXServer extends ESXCommon {
      * @returns {ESXServerXPlayer[]}  {xPlayer}
      * @memberof ESXServer
      */
-    GetExtendedPlayer(key: any, value: any): ESXServerXPlayer[]
+    GetExtendedPlayers(key: any, value: any): ESXServerXPlayer[]
 
     /**
      * @description
