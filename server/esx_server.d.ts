@@ -170,12 +170,12 @@ export class ESXServer extends ESXCommon {
      * @description
      * @author sirjxsh
      * @date 08.01.2024
-     * @param {any} key
+     * @param {string} key
      * @param {any} value
      * @returns {ESXServerXPlayer[]}  {xPlayer}
      * @memberof ESXServer
      */
-    GetExtendedPlayers(key: any, value: any): ESXPlayer[]
+    GetExtendedPlayers(key?: string, value?: any): ESXPlayer[]
 
     /**
      * @description
