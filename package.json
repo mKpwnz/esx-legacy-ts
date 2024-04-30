@@ -1,6 +1,6 @@
 {
     "name": "@mkpwnz/esx-legacy-ts",
-    "version": "0.2.15",
+    "version": "0.2.16",
     "description": "Typescript wrapper for the FiveM ESX core natives",
     "license": "ISC",
     "dependencies": {
