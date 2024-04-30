@@ -1,9 +1,9 @@
-import { ESXServerXPlayer } from '../classes'
-import { ESXServerJobGrades, ESXServerJobs } from '../classes/esx_server_jobs'
-import { ESXCommon } from '../common/esx_common'
-import { ESXPlayer } from './esx_xplayer'
+import { ESXServerXPlayer } from '../classes';
+import { ESXServerJobGrades, ESXServerJobs } from '../classes/esx_server_jobs';
+import { ESXCommon } from '../common/esx_common';
+import { ESXPlayer } from './esx_xplayer';
 
-export as namespace ESXServer
+export as namespace ESXServer;
 
 export class ESXServer extends ESXCommon {
     /**
@@ -27,7 +27,7 @@ export class ESXServer extends ESXCommon {
         playerID: number,
         components?: string[],
         tintIndex?: number,
-    ): void
+    ): void;
 
     /**
      * @description This function returns an item label.
@@ -37,7 +37,7 @@ export class ESXServer extends ESXCommon {
      * @returns {*}  {string}
      * @memberof ESXServer
      */
-    GetItemLabel(itemName: string): string
+    GetItemLabel(itemName: string): string;
 
     /**
      * @description This function gets a ESX player object from a server id. Returns null for invalid players.
@@ -47,7 +47,7 @@ export class ESXServer extends ESXCommon {
      * @returns {*}  {ESXPlayer}
      * @memberof ESXServer
      */
-    GetPlayerFromId(playerID: number): ESXPlayer
+    GetPlayerFromId(playerID: number): ESXPlayer;
 
     /**
      * @description This function returns the ESX player from the Rockstar identifier. Returns null if no player is found.
@@ -57,7 +57,7 @@ export class ESXServer extends ESXCommon {
      * @returns {*}  {ESXPlayer}
      * @memberof ESXServer
      */
-    GetPlayerFromIdentifier(identifier: string): ESXPlayer
+    GetPlayerFromIdentifier(identifier: string): ESXPlayer;
 
     /**
      * @description This function returns an array of all online players ID's. You can use this to access each players data.
@@ -66,7 +66,7 @@ export class ESXServer extends ESXCommon {
      * @returns {*}  {number[]}
      * @memberof ESXServer
      */
-    GetPlayers(): number[]
+    GetPlayers(): number[];
 
     /**
      * @description This function registers a server callback.
@@ -76,7 +76,7 @@ export class ESXServer extends ESXCommon {
      * @param {Function} callback Callback function, which contains an varied size of arguments depending on how many arguments parsed from client
      * @memberof ESXServer
      */
-    RegisterServerCallback(name: string, callback: Function): void
+    RegisterServerCallback(name: string, callback: Function): void;
 
     /**
      * @description This function registers an item as usable.
@@ -86,7 +86,7 @@ export class ESXServer extends ESXCommon {
      * @param {Function} callback Callback function
      * @memberof ESXServer
      */
-    RegisterUsableItem(item: string, callback: Function): void
+    RegisterUsableItem(item: string, callback: Function): void;
 
     /**
      * @description This function saves the player to database. It is async, and a function (optional) is invoked once saving is complete.
@@ -96,7 +96,7 @@ export class ESXServer extends ESXCommon {
      * @param {Function} [callback] Callback function
      * @memberof ESXServer
      */
-    SavePlayer(xPlayer: ESXPlayer, callback?: Function): void
+    SavePlayer(xPlayer: ESXPlayer, callback?: Function): void;
 
     /**
      * @description Registers an Serversided Command to the server
@@ -118,14 +118,14 @@ export class ESXServer extends ESXCommon {
         callback: (xPlayer: ESXPlayer, args: string[], showError: any) => void,
         allowConsole: boolean,
         suggestion?: {
-            help?: string
+            help?: string;
             arguments?: {
-                name: string
-                help: string
-                type: 'number' | 'player' | 'string' | 'item' | 'weapon' | 'any'
-            }[]
+                name: string;
+                help: string;
+                type: 'number' | 'player' | 'string' | 'item' | 'weapon' | 'any';
+            }[];
         },
-    ): void
+    ): void;
 
     /**
      * @description This function saves all players to database. It is async, and a function (optional) is invoked once saving is complete.
@@ -134,7 +134,7 @@ export class ESXServer extends ESXCommon {
      * @param {Function} [callback] Callback function
      * @memberof ESXServer
      */
-    SavePlayers(callback?: Function): void
+    SavePlayers(callback?: Function): void;
 
     /**
      * @description This function writes a trace if debugging is enabled in the configuration file.
@@ -143,7 +143,7 @@ export class ESXServer extends ESXCommon {
      * @param {any} message Anything to print to console
      * @memberof ESXServer
      */
-    Trace(message: any): void
+    Trace(message: any): void;
 
     /**
      * @description This function is to force a player to use an item.
@@ -153,7 +153,7 @@ export class ESXServer extends ESXCommon {
      * @param {string} itemName An item
      * @memberof ESXServer
      */
-    UseItem(playerID: number, itemName: string): void
+    UseItem(playerID: number, itemName: string): void;
 
     /**
      * @description
@@ -164,18 +164,18 @@ export class ESXServer extends ESXCommon {
      * @returns {*}  {boolean}
      * @memberof ESXServer
      */
-    DoesJobExist(job: string, grade: number): boolean
+    DoesJobExist(job: string, grade: number): boolean;
 
     /**
      * @description
      * @author sirjxsh
      * @date 08.01.2024
-     * @param {any} key
+     * @param {string} key
      * @param {any} value
      * @returns {ESXServerXPlayer[]}  {xPlayer}
      * @memberof ESXServer
      */
-    GetExtendedPlayer(key: any, value: any): ESXServerXPlayer[]
+    GetExtendedPlayers(key: any, value: any): ESXPlayer[];
 
     /**
      * @description
@@ -186,7 +186,7 @@ export class ESXServer extends ESXCommon {
      * @returns {number}  {count}
      * @memberof ESXServer
      */
-    GetNumPlayers(key: any, value: any): number
+    GetNumPlayers(key: any, value: any): number;
 
     /**
      * @description
@@ -196,7 +196,7 @@ export class ESXServer extends ESXCommon {
      * @returns {string}  {identifier}
      * @memberof ESXServer
      */
-    GetIdentifier(id: number): string
+    GetIdentifier(id: number): string;
 
     /**
      * @description
@@ -208,7 +208,7 @@ export class ESXServer extends ESXCommon {
      * @returns {string}  {identifier}
      * @memberof ESXServer
      */
-    GetVehicleType(model: string | number, player: number, callback?: Function): string
+    GetVehicleType(model: string | number, player: number, callback?: Function): string;
 
     /**
      * @description
@@ -220,7 +220,7 @@ export class ESXServer extends ESXCommon {
      * @param {string} message
      * @memberof ESXServer
      */
-    DiscordLog(name: string, title: string, color: string, message: string): void
+    DiscordLog(name: string, title: string, color: string, message: string): void;
 
     /**
      * @description
@@ -232,7 +232,7 @@ export class ESXServer extends ESXCommon {
      * @param {any} fields
      * @memberof ESXServer
      */
-    DiscordLogField(name: string, title: string, color: string, fields: any): void
+    DiscordLogField(name: string, title: string, color: string, fields: any): void;
 
     /**
      * @description This function creates a job. It is async, and a function (optional) is invoked once saving is complete.
@@ -241,7 +241,7 @@ export class ESXServer extends ESXCommon {
      * @param {ESXServerJobGrades[]} grades The grades of the job
      * @memberof ESXServer
      */
-    CreateJob(name: string, label: string, grades: ESXServerJobGrades[]): void
+    CreateJob(name: string, label: string, grades: ESXServerJobGrades[]): void;
 
     /**
      * @description This function refreshes the jobs.
@@ -249,7 +249,7 @@ export class ESXServer extends ESXCommon {
      * @date 08.01.2024
      * @memberof ESXServer
      */
-    RefreshJobs(): void
+    RefreshJobs(): void;
 
     /**
      * @description This function overrides the Playerfunction
@@ -258,7 +258,7 @@ export class ESXServer extends ESXCommon {
      * @param {string} index
      * @memberof ESXServer
      */
-    RegisterPlayerFunctionOverride(index: string): void
+    RegisterPlayerFunctionOverride(index: string): void;
 
     /**
      * @description This function returns the jobs. It is async, and a function (optional) is invoked once saving is complete.
@@ -267,7 +267,7 @@ export class ESXServer extends ESXCommon {
      * @returns {ESXServerJobs[]}  {ESXServerJobs[]}
      * @memberof ESXServer
      */
-    GetJobs(): ESXServerJobs[]
+    GetJobs(): ESXServerJobs[];
 
     /**
      * @description This function returns the job.
@@ -278,7 +278,7 @@ export class ESXServer extends ESXCommon {
      * @returns {boolean}  Exists or not
      * @memberof ESXServer
      */
-    DoesJobExist(job: string, grade: number): boolean
+    DoesJobExist(job: string, grade: number): boolean;
 
     /**
      * @description Returns if the player is admin or not
@@ -288,5 +288,5 @@ export class ESXServer extends ESXCommon {
      * @returns {boolean} {boolean}
      * @memberof ESXServer
      */
-    IsPlayerAdmin(playerid: number): boolean
+    IsPlayerAdmin(playerid: number): boolean;
 }
